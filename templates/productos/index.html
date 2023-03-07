@@ -2,4 +2,39 @@
 
 {% block content %}
 
+<main class="container-fluid mt-2">
+    <div class="container-fluid px-4"> 
+        <div class="card mb-4">
+            <div class="card-body">
+                <table id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripcion</th>
+                            <th>Precio Costo</th>
+                            <th>Precio Venta</th>
+                            <th>Existencia</th>
+                            <th>Operaciones</th>
+                        </tr>
+                    </thead>
+                  
+                    {% for p in productos %}
+                    <tbody>
+                        <tr>
+                            <td> {{p.id}} </td>
+                            <td> {{p.descripcion}} </td>
+                            <td> {{p.precio_costo}} </td>
+                            <td> {{p.precio_venta}} </td>
+                            <td> {{p.existencia}} </td>
+                            <td> Operaciones  </td>
+                        </tr>
+                      
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
 {% endblock %}
