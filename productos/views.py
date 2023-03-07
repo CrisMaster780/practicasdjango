@@ -4,4 +4,6 @@ from productos.models import Productos
 def Index(request):
     _productos = Productos.objects.all()
 
-    return render(request, 'productos/index.html')
+    return render(request, 'productos/index.html' , {
+        'productos':_productos
+    })

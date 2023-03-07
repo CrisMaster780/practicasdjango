@@ -1,4 +1,5 @@
 {% extends 'base/index.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -13,7 +14,7 @@
                             <th>Descripcion</th>
                             <th>Precio Costo</th>
                             <th>Precio Venta</th>
-                            <th>Existencia</th>
+                            
                             <th>Operaciones</th>
                         </tr>
                     </thead>
@@ -25,8 +26,7 @@
                             <td> {{p.descripcion}} </td>
                             <td> {{p.precio_costo}} </td>
                             <td> {{p.precio_venta}} </td>
-                            <td> {{p.existencia}} </td>
-                            <td> Operaciones  </td>
+                            <td> <i class="fa-solid fa-plus"></i>  <i class="fa-solid fa-minus"></i> </td>
                         </tr>
                       
                     </tbody>

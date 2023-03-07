@@ -12,7 +12,7 @@ class Productos(models.Model):
     descripcion = models.CharField(max_length=200)
     precio_costo = models.FloatField()
     precio_venta= models.FloatField()
-    existencia = models.IntegerField
+    existencia = models.IntegerField()
     cantidad_minima = models.IntegerField
     cantidad_maxima = models.IntegerField
     impuesto = models.ForeignKey(Impuesto, on_delete=models.CASCADE)
