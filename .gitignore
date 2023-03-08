@@ -1,6 +1,8 @@
 __pycache__/
 __pycache__
 migrations
-etc/tempest.conf
-etc/tempest.conf.sample
-etc/logging.conf
+cpython
+core/__pycache__
+urls.cpython
+settings.cpython
+

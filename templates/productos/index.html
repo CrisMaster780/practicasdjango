@@ -4,8 +4,13 @@
 {% block content %}
 
 <main class="container-fluid mt-2">
+    
     <div class="container-fluid px-4"> 
         <div class="card mb-4">
+            <h3>Listado de Productos</h3>
+            <div class="p-2">
+                <button class="btn btn-primary"> <i class="fa-solid fa-plus"></i> Nuevo</button>
+            </div>
             <div class="card-body">
                 <table id="datatablesSimple">
                     <thead>
@@ -14,7 +19,9 @@
                             <th>Descripcion</th>
                             <th>Precio Costo</th>
                             <th>Precio Venta</th>
-                            
+                            <th>Impuesto</th>
+                            <th>Existencia</th>
+
                             <th>Operaciones</th>
                         </tr>
                     </thead>
@@ -26,7 +33,10 @@
                             <td> {{p.descripcion}} </td>
                             <td> {{p.precio_costo}} </td>
                             <td> {{p.precio_venta}} </td>
-                            <td> <i class="fa-solid fa-plus"></i>  <i class="fa-solid fa-minus"></i> </td>
+                            <td> {{p.impuesto.descripcion}} </td>
+                            <td> {{p.existencia}} </td>
+                            <td> <button class="btn btn-secondary"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                 <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button> </td>
                         </tr>
                       
                     </tbody>
