@@ -9,6 +9,16 @@ def Index(request):
     })
 
 def nuevo(request):
-    return render(request, 'productos/nuevo.html' , {
-       
-    })
+    _impuesto = Impuesto.objects.all()
+
+    if request.method == 'GET':
+        return render(request, 'productos/nuevo.html' , {
+        'impuestos':_impuesto
+        })
+    else:
+        print(request.POST)
+
+        return render(request, 'productos/nuevo.html' , {
+            'impuestos':_impuesto
+        })
+

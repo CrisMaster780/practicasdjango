@@ -1,6 +1,76 @@
 {% extends 'base/index.html' %}
 {% block content %}
 
+<main class="container mt-2 mb-2 p-2 ">
+    <div class="container text-center">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group p-2 row">
+                <label class="col-sm-2 text-center col-form-label">Codigo del Fabricante.:</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control text-center" name="codigo_fabricante">
+                </div>
+                <div class="col-sm-2">
+                    <button  class="btn btn-success" type="submit"> <i class="fa-solid fa-check"></i> Registrar </button>
+                </div>
+            </div>
+
+            <div class="form-group  p-2 row">
+                <label class="col-sm-2 text-center col-form-label">Tipo de Impuesto.:</label>
+                <div class="col-sm-4">
+                    <select  class="text-center form-control  col-form-label">
+                        <option  >Seleccione el Impuesto</option>
+                        {% for i in impuestos %}
+                        <option  value="{{i.id}}"  >{{i.descripcion}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <button  class="btn btn-warning" type="submit"> <i class="fa-solid fa-xmark"></i>&nbsp; &nbsp;Cancelar </button>
+                </div>
+            </div>
+
+            <div class="form-group  p-2 row">
+                <label class="col-sm-2 text-center col-form-label">Descripcion del Producto:
+                </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control text-center" name="descripcion">
+                </div>
+            </div>
+
+            <div class="form-group  p-2 row">
+                <label class="col-sm-2 col-form-label">Precio Costo: </label>
+                <div class="col-sm-2">
+                    <input type="number" name="precio_costo" class="form-control text-center">
+                </div>
+                <label class="col-sm-2 col-form-label">Precio Venta: </label>
+                <div class="col-sm-2">
+                    <input type="number" name="precio_venta" class="form-control text-center">
+                </div>
+            </div>
+
+
+            <div class="form-group  p-2 row">
+                <label class="col-sm-2 col-form-label">Cantidad Minima: </label>
+                <div class="col-sm-2">
+                    <input type="number" name="cantidad_minima" class="form-control text-center">
+                </div>
+                <label class="col-sm-2 col-form-label">Cantidad Maxima: </label>
+                <div class="col-sm-2">
+                    <input type="number" name="cantidad_maxima" class="form-control text-center">
+                </div>
+            </div>
+
+            <div class="form-group  p-2 row">
+                <label class="col-sm-2 col-form-label">Existencia: </label>
+                <div class="col-sm-2">
+                    <input type="number" name="existencia" class="form-control text-center">
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+
 
 
 
