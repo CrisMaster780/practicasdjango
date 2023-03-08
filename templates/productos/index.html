@@ -31,8 +31,8 @@
                         <tr>
                             <td> {{p.id}} </td>
                             <td> {{p.descripcion}} </td>
-                            <td> {{p.precio_costo}} </td>
-                            <td> {{p.precio_venta}} </td>
+                            <td> {{p.precio_costo|floatformat:0 }} </td>
+                            <td> {{p.precio_venta|floatformat:0 }} </td>
                             <td> {{p.impuesto.descripcion}} </td>
                             <td> {{p.existencia}} </td>
                             <td> <button class="btn btn-secondary"><i class="fa-solid fa-arrows-rotate"></i></button>
