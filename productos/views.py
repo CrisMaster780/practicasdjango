@@ -8,6 +8,9 @@ def Index(request):
         'productos':_productos
     })
 
+
+
+
 def nuevo(request):
     _impuesto = Impuesto.objects.all()
 
